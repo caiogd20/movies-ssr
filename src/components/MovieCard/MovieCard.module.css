@@ -1,0 +1,75 @@
+.movieCard {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.movieCard a {
+    display: block;
+    width: 100%;
+}
+
+.movieCard img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background: #0d1117;
+}
+
+.movieCardContent {
+    padding: 18px 14px 18px;
+    background: rgba(10, 12, 18, 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.movieCardContent h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: left;
+    min-height: 2.6em;
+}
+
+.movieCardContent span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+    color: #f7d447;
+    font-weight: 700;
+}
+
+.movieCardContent button,
+.movieCardContent a {
+    margin-top: 4px;
+    border: 1px solid #f7d447;
+    background: #f7d447;
+    color: #171717;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movieCardContent button:hover,
+.movieCardContent a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(247, 212, 71, 0.2);
+}

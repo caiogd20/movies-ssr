@@ -1,0 +1,14 @@
+.moviesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 330px));
+    justify-content: center;
+    gap: 34px 44px;
+    padding: 42px 24px 64px;
+    background: #05070d;
+    min-height: calc(100vh - 146px);
+}
+
+.moviesGrid a {
+    text-decoration: none;
+    color: inherit;
+}

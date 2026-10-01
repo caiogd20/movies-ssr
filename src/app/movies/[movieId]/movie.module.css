@@ -1,0 +1,69 @@
+.movie {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+    background: #05070d;
+    min-height: calc(100vh - 146px);
+    color: #f3f4f6;
+}
+
+.moviePoster {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    background: #0d1117;
+    flex-shrink: 0;
+}
+
+.moviePoster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 540px;
+    object-fit: cover;
+}
+
+.movieContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.movieTitle {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.2rem, 3vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.movieOverview {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 760px;
+}
+
+.movieRating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+    color: #f7d447;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.movieRatingStar {
+    font-size: 1.5rem;
+    line-height: 1;
+}
