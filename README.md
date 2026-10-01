@@ -29,8 +29,18 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and set your TMDB API Read Access Token:
+
+```bash
+cp .env.example .env.local
+```
+
+Keep `.env.local` private. The token is used only by server-side code and must not use the `NEXT_PUBLIC_` prefix.
+
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Import this repository in [Vercel](https://vercel.com/new). Vercel detects Next.js automatically and uses `npm run build`; no additional Vercel configuration file is needed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Before deploying, add `TMDB_API_READ_ACCESS_TOKEN` in **Project Settings > Environment Variables** for each environment you use (Production, Preview, and Development), then redeploy. The same variable name is used locally in `.env.local`.

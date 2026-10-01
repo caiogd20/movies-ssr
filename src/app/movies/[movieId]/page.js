@@ -2,6 +2,8 @@ import Image from "next/image";
 import styles from "./movie.module.css";
 import { getMovie } from "@/services/movies.services";
 
+export const dynamic = "force-dynamic";
+
 export default async function Movie({ params }) {
     const { movieId } = await params;
     const movie = await getMovie(movieId);
