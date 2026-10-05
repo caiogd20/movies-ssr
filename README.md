@@ -1,46 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movies SSR
 
-## Getting Started
+A movie browser built with Next.js and server-side rendering, powered by [The Movie Database (TMDB)](https://www.themoviedb.org/) API. It is the server-rendered counterpart of my [Movies SPA](https://github.com/caiogd20/Movies-spa) project.
 
-First, run the development server:
+**Live demo:** https://movies-ssr-one.vercel.app
+
+## Screenshots
+
+### Home page
+
+![Home page](docs/Home.png)
+
+### Movies page
+
+![Movies page](docs/Movies.png)
+
+### Footer
+
+![Footer](docs/footer.png)
+
+## Features
+
+- Popular movies grid with poster, title and rating
+- Movie details page with synopsis, rendered on the server
+- The TMDB token is only used on the server and never reaches the browser
+
+## Tech stack
+
+- **Next.js** (App Router) + **React**
+- **Axios** for HTTP requests
+- **React Query** for data fetching and caching
+- Deployed on **Vercel**
+
+## Getting started
 
 ```bash
+git clone https://github.com/caiogd20/movies-ssr.git
+cd movies-ssr
+npm install
+cp .env.example .env   # then set TMDB_API_READ_ACCESS_TOKEN
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. You can get a free API read access token at [themoviedb.org](https://www.themoviedb.org/settings/api).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm start` | Run the production build |
 
-## Learn More
+## Credits
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Environment Variables
-
-Copy `.env.example` to `.env.local` and set your TMDB API Read Access Token:
-
-```bash
-cp .env.example .env.local
-```
-
-Keep `.env.local` private. The token is used only by server-side code and must not use the `NEXT_PUBLIC_` prefix.
-
-## Deploy on Vercel
-
-Import this repository in [Vercel](https://vercel.com/new). Vercel detects Next.js automatically and uses `npm run build`; no additional Vercel configuration file is needed.
-
-Before deploying, add `TMDB_API_READ_ACCESS_TOKEN` in **Project Settings > Environment Variables** for each environment you use (Production, Preview, and Development), then redeploy. The same variable name is used locally in `.env.local`.
+This product uses the TMDB API but is not endorsed or certified by TMDB.
