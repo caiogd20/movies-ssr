@@ -31,7 +31,7 @@ export default async function Movie({ params }) {
                 <p className={styles.movieOverview}>{movieData.overview}</p>
                 <div className={styles.movieRating}>
                     <span className={styles.movieRatingStar}>★</span>
-                    <span>{movieData.vote_average}</span>
+                    <span>{movieData.vote_average.toFixed(1)}</span>
                 </div>
             </div>
         </article>
